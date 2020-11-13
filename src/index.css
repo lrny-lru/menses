@@ -1,13 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+html{
+  color:#fff;
+}
 body {
+  background-color: #fff;
+  padding: 20px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, p, ul, li {
+  font-family:'Raleway', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul.unordered-list li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.unordered-list {
+  background-color:#666699;
+  padding: 0;
+}
+
+ul.unordered-list li a {
+  
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+
+
+
+#menses-title{
+ display:inline;
+  margin-left:0.3em;
+
+}
+
+.content {
+  background-color: #666666;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+
+.active {
+  background-color: #00ff99;
+  
+  
+}
+ul.active li a {
+  color:#000;
+}
+
+ul#topics li a{
+  text-decoration:  none;
+  list-style:none ;
 }
