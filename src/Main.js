@@ -1,21 +1,60 @@
 
 import React, { Component } from 'react';
-
-
+import DefaultContext from './context/DefaultContext';
 import {
     Route,
     NavLink,
     HashRouter
 } from 'react-router-dom';
-import Home from './Home';
+import Home from './components/Home';
 import Topics from './Topics';
-import Contact from './Contact';
+import Contact from './components/Contact';
+
 
 class Main extends Component {
-   
+    static contextType = DefaultContext;
+
+   state ={
+       store:{
+           topics:[]
+       }, 
+       url:'http://localhost:8000'  
+   };
+
+   updateStore = () =>{
+       this.getTopics();
+   }
+
+   getTopics = () =>{
+       
+    
+        fetch(`${this.context.url}/topics`)
+            .then( r => r.json( ))
+            .then(r => {this.setState({
+                store:{
+                    topics:r
+                }
+            });
+        })
+        .catch( e => {
+            console.error( e )
+            throw new Error(`Error retrieving topics: ${e.message}`);
+        })
+   }
+
+   componentDidMount=()=>{
+       this.updateStore();
+   } 
+
     render(){ 
+        const contextValue = {
+            updateStore: this.updateStore,
+            url:this.state.url
+        }
+
         return(
-            <HashRouter>
+            <DefaultContext.Provider value={contextValue}>
+                <HashRouter>
                
                     <header id="static-header">
                         <div id="flex">
@@ -27,6 +66,9 @@ class Main extends Component {
                                     <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
                                 
                                  </ul>
+                                 <section>
+                                   
+                                </section>
                                     
                             </nav>
                         </div>
@@ -34,12 +76,16 @@ class Main extends Component {
                        
                         <div className="content">
                             <Route exact path="/" component={Home}/>
-                            <Route path="/Topics" component={Topics}/>
+                            <Route path="/Topics" render={() => <Topics store={this.state.store} />} 
+
+                            />
                             <Route path="/Contact" component={Contact}/>
 
                         </div>
                     </header>
-            </HashRouter>
+                </HashRouter>
+            </DefaultContext.Provider>
+
         );
     }
 }

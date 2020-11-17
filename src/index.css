@@ -1,15 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap');
+
 html{
   color:#fff;
+  font-family:'Space Grotesk', sans-serif;
 }
+
 body {
   background-color: #fff;
   padding: 20px;
   margin: 0;
 }
-h1, h2, p, ul, li {
-  font-family:'Raleway', sans-serif;
-}
+
+  
+
 
 ul.unordered-list li {
   display: inline;
@@ -29,6 +33,11 @@ ul.unordered-list li a {
   display: inline-block;
 }
 
+#wiki-article{
+  
+  color: #000;
+  border: #e5e5e7 solid 0.2em;
+}
 
 
 #menses-title{
@@ -38,7 +47,7 @@ ul.unordered-list li a {
 }
 
 .content {
-  background-color: #666666;
+  background-color: #e5e5e7;
   padding: 20px;
 }
 .content h2 {
