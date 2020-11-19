@@ -34,11 +34,21 @@ ul.unordered-list li a {
 }
 
 #wiki-article{
-  
+  margin-top: 0.3em;
   color: #000;
   border: #e5e5e7 solid 0.2em;
 }
-
+#container-for-wikis{
+  
+  margin-top:3.0em;
+  margin-left:3.0em;
+  overflow: scroll;
+  height:15.0em;
+  width: 50%;
+  
+  border: solid rgb(197, 197, 197) 0.2em;
+  
+}
 
 #menses-title{
  display:inline;
@@ -70,4 +80,31 @@ ul.active li a {
 ul#topics li a{
   text-decoration:  none;
   list-style:none ;
+}
+
+#topics li{
+  display:inline-block;
+  border: #000 solid 0.1em;
+  border-radius:0.3em;
+  height: 10.0em;
+  width: 10.0em;
+  
+
+}
+
+#anatomy{
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Gray1167.svg/553px-Gray1167.svg.png");
+}
+
+#hormone{
+  background-image:url("https://openstax.org/resources/0dbf6852b50fac8780909f0855e32e87bdc761af");
+}
+#cycle{
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Lining_of_Uterine_Wall.jpg");
+}
+#symptom{
+  background-image:url("https://openstax.org/resources/cdcdf2286ebcf71c2c109cbb44f5965ff258bf5a");
+}
+#disorder{
+  background-image:url("https://images.squarespace-cdn.com/content/v1/5b1d432255b02ca400b7d550/1533520789134-4C5I14GL2C8WVGOZMNU9/ke17ZwdGBToddI8pDm48kI0kOtO_9fggN8NM1PIdHidZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIrI8fHYaCFRQ5c7BsGyEW3gq1BeXoLklj4Gf0_i221zMKMshLAGzx4R3EDFOm1kBS/Menstrual+Cycle+Hs.jpg?format=1000w");
 }

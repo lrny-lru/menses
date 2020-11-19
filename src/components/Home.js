@@ -7,8 +7,10 @@ class Home extends Component{
             <div className="welcome-container">
              <h2>Welcome to (me)nses</h2>
                 <section classname="landing-container">
+                    
+                    <label aria-label="What is menses?"><h3>What is (me)nses?</h3></label>
                     <p>
-                    This is a placeholder
+                        Menses is a wiki dedicated to cultivating up-to-date knowledge on: the menstrual cycle, sex hormones, anatomy and disorders/diseases related to menses without using gendered language. 
                     </p>
                 </section>
             

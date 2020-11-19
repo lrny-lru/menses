@@ -9,6 +9,7 @@ import {
 import Home from './components/Home';
 import Topics from './Topics';
 import Contact from './components/Contact';
+import WikiWindow from './components/WikiWindow';
 
 
 class Main extends Component {
@@ -76,13 +77,17 @@ class Main extends Component {
                        
                         <div className="content">
                             <Route exact path="/" component={Home}/>
-                            <Route path="/Topics" render={() => <Topics store={this.state.store} />} 
-
-                            />
+                            
+                            <Route path="/Topics" render={()=><Topics store={this.state.store} />} />
                             <Route path="/Contact" component={Contact}/>
 
                         </div>
                     </header>
+                    <footer>
+
+                    <WikiWindow store={this.state.store} />
+                    </footer>
+                   
                 </HashRouter>
             </DefaultContext.Provider>
 

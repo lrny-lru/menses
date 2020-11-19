@@ -1,26 +1,14 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import './index.css';
-import DisplayWikiArticle from './components/DisplayWikiArticle';
+
+
+import WikiWindow from './components/WikiWindow';
 
 
 class Topics extends Component {
 
-    populateItems = () => {
-        return (
-            this.props.store.topics.map((topic) => {
-                return (
 
-                    <DisplayWikiArticle
-                        key={topic.id}
-                        name={topic.title}
-                        content={topic.content}
-                        tags={topic.keywords}
-                    />
-                );
-            })
-        )
-    }
 
     render() {
         return (
@@ -29,27 +17,30 @@ class Topics extends Component {
                     <h2>Topics</h2>
                     <div className="topics">
                         <ul id="topics">
-                            <li><a href="/anatomy">Anatomy</a></li>
-                            <li><a href="/Symptoms">Symptoms</a></li>
-                            <li><a href="/hormones">Hormones</a></li>
-                            <li><a href="/disorders">Disorders</a></li>
-                            <li><a href="/cycles">Cycle phases</a></li>
+                            <li id="anatomy"><a href="/anatomy">Anatomy</a></li>
+                            <li id="Symptom"><a href="/Symptoms">Symptoms</a></li>
+                            <li id="hormone"><a href="/hormones">Hormones</a></li>
+                            <li id="disorder"><a href="/disorders">Disorders</a></li>
+                            <li id="cycle"><a href="/cycles">Cycle phases</a></li>
                         </ul>
                     </div>
 
                 </div>
-                    <div className="results" >
+                <footer className="results" >
 
-                        {this.populateItems()}
+                   
 
-                    </div>
-                
+                </footer>
+
             </div>
 
 
         );
     }
 }
+
+
+
 //search term as prop
 //entities, groups of info someone is looking for
 //keywords
