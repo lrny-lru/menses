@@ -21,10 +21,12 @@ class WikiWindow extends Component {
     render(){
 
         return( 
-            <div id="container-for-wikis">
-                <h2>Recently added articles</h2>
-                {this.populateItems(<DisplayWikiArticle />)}
+            <div>
+                <div id="container-for-wikis">
+                    <h2>Recently added articles</h2>
+                    {this.populateItems(<DisplayWikiArticle />)}
                
+                </div>
             </div>
         );
     }

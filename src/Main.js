@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import DefaultContext from './context/DefaultContext';
+import DefaultContext from './components/context/DefaultContext';
 import {
     Route,
     NavLink,
@@ -10,7 +10,7 @@ import Home from './components/Home';
 import Topics from './Topics';
 import Contact from './components/Contact';
 import WikiWindow from './components/WikiWindow';
-
+import SearchBar from './components/SearchBar';
 
 class Main extends Component {
     static contextType = DefaultContext;
@@ -19,7 +19,7 @@ class Main extends Component {
        store:{
            topics:[]
        }, 
-       url:'http://localhost:8000'  
+       url:'https://hidden-escarpment-33113.herokuapp.com'  
    };
 
    updateStore = () =>{
@@ -65,6 +65,7 @@ class Main extends Component {
                                     <li><NavLink to="/topics">Topics</NavLink></li>
                                     <li><NavLink to="/contact">Contact </NavLink></li>
                                     <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
+                                    <span><SearchBar /></span>
                                 
                                  </ul>
                                  <section>
@@ -75,7 +76,7 @@ class Main extends Component {
                         </div>
                   
                        
-                        <div className="content">
+                        <div id="content">
                             <Route exact path="/" component={Home}/>
                             
                             <Route path="/Topics" render={()=><Topics store={this.state.store} />} />

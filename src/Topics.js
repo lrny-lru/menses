@@ -13,7 +13,7 @@ class Topics extends Component {
     render() {
         return (
             <div>
-                <div className="Topics-Container">
+                <div id="Topics-Container">
                     <h2>Topics</h2>
                     <div className="topics">
                         <ul id="topics">

@@ -11,7 +11,9 @@ body {
   padding: 20px;
   margin: 0;
 }
-
+body{
+  display:flexbox;
+}
   
 
 
@@ -32,22 +34,39 @@ ul.unordered-list li a {
   padding: 20px;
   display: inline-block;
 }
-
+form{
+  width:50%;
+  margin-left:5.0em;
+  display: inline-block;
+}
+button#search-submit-button{
+  background-image:
+}
+#seeMore{
+  display:inline-block;
+}
 #wiki-article{
   margin-top: 0.3em;
   color: #000;
   border: #e5e5e7 solid 0.2em;
+  
 }
+
 #container-for-wikis{
   
   margin-top:3.0em;
   margin-left:3.0em;
   overflow: scroll;
+  
   height:15.0em;
   width: 50%;
   
   border: solid rgb(197, 197, 197) 0.2em;
+  border-radius: 0.5em ;
   
+}
+div#container-for-wikis{
+  color:#000;
 }
 
 #menses-title{
@@ -55,7 +74,9 @@ ul.unordered-list li a {
   margin-left:0.3em;
 
 }
-
+div#Topics-Container{
+  background-color:#e5e5e7;
+}
 .content {
   background-color: #e5e5e7;
   padding: 20px;
@@ -106,5 +127,6 @@ ul#topics li a{
   background-image:url("https://openstax.org/resources/cdcdf2286ebcf71c2c109cbb44f5965ff258bf5a");
 }
 #disorder{
-  background-image:url("https://images.squarespace-cdn.com/content/v1/5b1d432255b02ca400b7d550/1533520789134-4C5I14GL2C8WVGOZMNU9/ke17ZwdGBToddI8pDm48kI0kOtO_9fggN8NM1PIdHidZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIrI8fHYaCFRQ5c7BsGyEW3gq1BeXoLklj4Gf0_i221zMKMshLAGzx4R3EDFOm1kBS/Menstrual+Cycle+Hs.jpg?format=1000w");
+  background-image:url("https://images.squarespace-cdn.com/content/v1/5b1d432255b02ca400b7d550/1528660829342-04BVWZ1HDC80IO9A4Q1Y/ke17ZwdGBToddI8pDm48kPnsf5mMwK3KDy1tisBlUmRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpz-e-UqgkMEfcidCGc60YhJxyx2DguYXodNYGkBnakWNjMf4spqvx95de_vD8JxcLk/Ovary.jpg?format=750w");
+  background-position: center;
 }
