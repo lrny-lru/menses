@@ -39,17 +39,21 @@ form{
   margin-left:5.0em;
   display: inline-block;
 }
-button#search-submit-button{
-  background-image:
+div#content{
+  width:50%;
 }
-#seeMore{
-  display:inline-block;
-}
+
 #wiki-article{
   margin-top: 0.3em;
   color: #000;
   border: #e5e5e7 solid 0.2em;
   
+}
+div{
+  background-color: rgb(214, 214, 214)
+}
+footer{
+  margin-top: 3.0em;
 }
 
 #container-for-wikis{
@@ -58,14 +62,19 @@ button#search-submit-button{
   margin-left:3.0em;
   overflow: scroll;
   
-  height:15.0em;
+  height:20.0em;
   width: 50%;
   
   border: solid rgb(197, 197, 197) 0.2em;
-  border-radius: 0.5em ;
+  border-radius: 0.10em ;
+  background-color:#fff;
   
 }
-div#container-for-wikis{
+h3#display-wiki-name:hover{
+  color:#000;
+  background-color: #00ff99;
+}
+section#container-for-wikis{
   color:#000;
 }
 

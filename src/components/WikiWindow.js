@@ -13,6 +13,7 @@ class WikiWindow extends Component {
                         name={topic.title}
                         content={topic.content}
                         tags={topic.keywords}
+                        expanded="false"
                     />
                 );
             })
@@ -21,13 +22,13 @@ class WikiWindow extends Component {
     render(){
 
         return( 
-            <div>
-                <div id="container-for-wikis">
+            <section id="container4container">
+                <section id="container-for-wikis">
                     <h2>Recently added articles</h2>
                     {this.populateItems(<DisplayWikiArticle />)}
                
-                </div>
-            </div>
+                </section>
+            </section>
         );
     }
 
