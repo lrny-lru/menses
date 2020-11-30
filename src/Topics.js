@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
+
 import './index.css';
 
 
-import WikiWindow from './components/WikiWindow';
 
 
 class Topics extends Component {
