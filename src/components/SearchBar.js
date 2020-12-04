@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import DefaultContext from './context/DefaultContext';
-import config from './config';
+
 
 class SearchBar extends Component {
   static contextType = DefaultContext;
