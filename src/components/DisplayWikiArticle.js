@@ -17,16 +17,6 @@ class DisplayWikiArticle extends Component {
         this.setState({open:!this.state.open})
     }
     
-
-
-    
-
-    
-
-        
-    
-
-
    
 
     render(){
@@ -36,7 +26,8 @@ class DisplayWikiArticle extends Component {
                 
                 <section className="wiki-article" id="wiki-article">
                     <h3 onClick={(e)=>this.togglePanel(e)} id="display-wiki-name">{name}</h3>
-                    {this.state.open ? ( <p id="content">{content}</p>) : null}
+                    {this.state.open ? ( 
+                        <p id="content">{content}</p>) : null}
                     
                     <p id="bold-keywords"><b>keywords:</b> {tags}</p>
                 </section>

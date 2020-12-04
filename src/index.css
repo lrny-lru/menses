@@ -5,6 +5,26 @@ html{
   color:#fff;
   font-family:'Space Grotesk', sans-serif;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 
 body {
   background-color: #fff;
@@ -39,19 +59,26 @@ form{
   margin-left:5.0em;
   display: inline-block;
 }
+section#landing-container{
+  background-color: rgb(112, 110, 110);
+}
 div#content{
   width:50%;
+}
+section#wiki-article{
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  
 }
 
 #wiki-article{
   margin-top: 0.3em;
+  margin-left:1.0em;
+  margin-right:1.0em;
   color: #000;
   border: #e5e5e7 solid 0.2em;
   
 }
-div{
-  background-color: rgb(214, 214, 214)
-}
+
 footer{
   margin-top: 3.0em;
 }
@@ -63,12 +90,17 @@ footer{
   overflow: scroll;
   
   height:20.0em;
-  width: 50%;
   
-  border: solid rgb(197, 197, 197) 0.2em;
-  border-radius: 0.10em ;
+  
+  
   background-color:#fff;
   
+}
+
+#container4container{
+  border: solid rgb(197, 197, 197) 0.2em;
+  border-radius: 1.0em ;
+  width:fit-content;
 }
 h3#display-wiki-name:hover{
   color:#000;

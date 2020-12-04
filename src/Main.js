@@ -19,11 +19,17 @@ class Main extends Component {
        store:{
            topics:[]
        }, 
-       url:'https://hidden-escarpment-33113.herokuapp.com'  
+       url:'https://hidden-escarpment-33113.herokuapp.com',
+
+       searchTerm:'' 
    };
 
    updateStore = () =>{
        this.getTopics();
+   }
+
+   setSearchTerm =(searchTerm) =>{
+       this.setState({searchTerm})
    }
 
    getTopics = () =>{
@@ -65,7 +71,7 @@ class Main extends Component {
                                     <li><NavLink to="/topics">Topics</NavLink></li>
                                     <li><NavLink to="/contact">Contact </NavLink></li>
                                     <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
-                                    <span><SearchBar /></span>
+                                    <span><SearchBar setSearchTerm={this.setSearchTerm} /></span>
                                 
                                  </ul>
                                  <section>
@@ -86,7 +92,7 @@ class Main extends Component {
                     </header>
                     <footer>
 
-                    <WikiWindow store={this.state.store} />
+                    <WikiWindow store={this.state.store} searchTerm={this.state.searchTerm} />
                     </footer>
                    
                 </HashRouter>
