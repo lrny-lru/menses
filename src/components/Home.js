@@ -5,7 +5,7 @@ class Home extends Component{
     render(){
         return(
             <div className="welcome-container">
-             <h2>Welcome to (me)nses</h2>
+             
                 <section classname="landing-container">
                     
                     <label aria-label="What is menses?"><h3>What is (me)nses?</h3></label>

@@ -4,7 +4,14 @@
 html{
   color:#fff;
   font-family:'Space Grotesk', sans-serif;
+  
+  
 }
+
+div, section, nav{
+  margin:auto;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -27,43 +34,84 @@ html{
 }
 
 body {
+  background-image:url('https://i.imgur.com/kqXAHir.png');
   background-color: #fff;
   padding: 20px;
   margin: 0;
 }
 body{
+  
   display:flexbox;
 }
-  
-
-
 ul.unordered-list li {
   display: inline;
   list-style-type: none;
   margin: 0;
 }
-ul.unordered-list {
-  background-color:#666699;
-  padding: 0;
+.active {
+  background-color: #00ff99;
+  color:#000;
+  
+  
 }
-
 ul.unordered-list li a {
+  color: #000;
   
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
   display: inline-block;
 }
+ul.unordered-list {
+  background-color:#666699;
+  padding: 0;
+  width: 50%;
+  margin: auto;
+}
+a.active{
+  color:#000;
+}
+
+
+
+
+ h1#welcome{
+   color:black;
+   text-align:center;
+   background-color: #fff;
+
+ } 
+header#static-header{
+  margin-top:3em;
+}
+
+#search-bar{
+  display: inline-block;
+  
+  margin-left:0.7em;
+
+}
+button#search-submit-button{
+  display:inline;
+}
+
 form{
   width:50%;
-  margin-left:5.0em;
+
   display: inline-block;
 }
-section#landing-container{
-  background-color: rgb(112, 110, 110);
+div.welcome-container{
+  border: solid rgb(165, 164, 164) 0.1em;
+  color:#000;
+  padding:1.0em;
+  margin-top:1em;
+  width:fit-content;
+  max-width: 50%;
+  order:1;
+  
 }
 div#content{
-  width:50%;
+  width:fit-content;
 }
 section#wiki-article{
   padding: 0.3em 0.3em 0.3em 0.3em;
@@ -75,7 +123,7 @@ section#wiki-article{
   margin-left:1.0em;
   margin-right:1.0em;
   color: #000;
-  border: #e5e5e7 solid 0.2em;
+  border: #ece6e8 solid 0.1em;
   
 }
 
@@ -98,13 +146,17 @@ footer{
 }
 
 #container4container{
-  border: solid rgb(197, 197, 197) 0.2em;
-  border-radius: 1.0em ;
+  order:last;
+ 
+  border: solid rgb(219, 218, 218) 0.1em;
+
+  max-width: 50%;
   width:fit-content;
 }
 h3#display-wiki-name:hover{
   color:#000;
   background-color: #00ff99;
+  text:("Click to expand");
 }
 section#container-for-wikis{
   color:#000;
@@ -130,14 +182,8 @@ div#Topics-Container{
   margin-bottom: 10px;
 }
 
-.active {
-  background-color: #00ff99;
-  
-  
-}
-ul.active li a {
-  color:#000;
-}
+
+
 
 ul#topics li a{
   text-decoration:  none;
@@ -156,6 +202,7 @@ ul#topics li a{
 
 #anatomy{
   background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Gray1167.svg/553px-Gray1167.svg.png");
+  background-position: center;
 }
 
 #hormone{
@@ -163,11 +210,20 @@ ul#topics li a{
 }
 #cycle{
   background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Lining_of_Uterine_Wall.jpg");
+  background-position: center;
 }
 #symptom{
   background-image:url("https://openstax.org/resources/cdcdf2286ebcf71c2c109cbb44f5965ff258bf5a");
+  background-position: center;
 }
 #disorder{
   background-image:url("https://images.squarespace-cdn.com/content/v1/5b1d432255b02ca400b7d550/1528660829342-04BVWZ1HDC80IO9A4Q1Y/ke17ZwdGBToddI8pDm48kPnsf5mMwK3KDy1tisBlUmRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpz-e-UqgkMEfcidCGc60YhJxyx2DguYXodNYGkBnakWNjMf4spqvx95de_vD8JxcLk/Ovary.jpg?format=750w");
   background-position: center;
+}
+
+div.Contacts-container{
+  border: solid 0.1em rgb(219, 218, 218) ;
+  color:#000;
+  padding:0.3em;
+  margin-top:0.5em;
 }

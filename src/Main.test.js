@@ -1,7 +1,0 @@
-
-
-
-
-it(`should render underpants`, ()=>{
-    
-})

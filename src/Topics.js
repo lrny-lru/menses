@@ -16,11 +16,11 @@ class Topics extends Component {
                     <h2>Topics</h2>
                     <div className="topics">
                         <ul id="topics">
-                            <li id="anatomy"><a href="/anatomy">Anatomy</a></li>
-                            <li id="Symptom"><a href="/Symptoms">Symptoms</a></li>
-                            <li id="hormone"><a href="/hormones">Hormones</a></li>
-                            <li id="disorder"><a href="/disorders">Disorders</a></li>
-                            <li id="cycle"><a href="/cycles">Cycle phases</a></li>
+                            <li title="Anatomy" id="anatomy"><a  aria-label="anatomy" href="/anatomy">Anatomy</a></li>
+                            <li title="Symptoms" id="Symptom"><a href="/Symptoms">Symptoms</a></li>
+                            <li title="Hormones" id="hormone"><a href="/hormones">Hormones</a></li>
+                            <li title="Disorders" id="disorder"><a href="/disorders">Disorders</a></li>
+                            <li title="Menstrual Cycle" aria-label="Menstrual Cycle" id="cycle"><a href="/cycles">Menstrual Cycle</a></li>
                         </ul>
                     </div>
 

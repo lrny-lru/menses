@@ -64,6 +64,7 @@ class Main extends Component {
                 <HashRouter>
                
                     <header id="static-header">
+                        <h1 id="welcome">Welcome to (me)nses</h1>
                         <div id="flex">
                             <nav>
                                 <ul className="unordered-list">
@@ -71,7 +72,7 @@ class Main extends Component {
                                     <li><NavLink to="/topics">Topics</NavLink></li>
                                     <li><NavLink to="/contact">Contact </NavLink></li>
                                     <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
-                                    <span><SearchBar setSearchTerm={this.setSearchTerm} /></span>
+                                    <span id="search-bar"><SearchBar setSearchTerm={this.setSearchTerm} /></span>
                                 
                                  </ul>
                                  <section>
