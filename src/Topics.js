@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchBar from './components/SearchBar';
 
 import './index.css';
 
@@ -17,8 +18,8 @@ class Topics extends Component {
                     <div className="topics">
                         <ul id="topics">
                             <li title="Anatomy" id="anatomy"><a  aria-label="anatomy" href="/anatomy">Anatomy</a></li>
-                            <li title="Symptoms" id="Symptom"><a href="/Symptoms">Symptoms</a></li>
-                            <li title="Hormones" id="hormone"><a href="/hormones">Hormones</a></li>
+                            <li title="Symptoms" id="Symptom"><a href="/Symptoms" Component={<SearchBar searchTerm="Symptoms" />}>Symptoms</a></li>
+                            <li title="Hormones" onClick={<SearchBar searchTerm="Hormones" />} id="hormone"><a href="/hormones">Hormones</a></li>
                             <li title="Disorders" id="disorder"><a href="/disorders">Disorders</a></li>
                             <li title="Menstrual Cycle" aria-label="Menstrual Cycle" id="cycle"><a href="/cycles">Menstrual Cycle</a></li>
                         </ul>

@@ -3,7 +3,7 @@ import DefaultContext from './context/DefaultContext';
 
 
 class SearchBar extends Component {
-  static contextType = DefaultContext;
+ 
   
   
     state = {
@@ -30,16 +30,17 @@ class SearchBar extends Component {
     return (
         
       
-      <form onSubmit={(e) => {
+      <form id="search-bar" onSubmit={(e) => {
+
         e.preventDefault();
         this.props.setSearchTerm(this.state.searchInput)
-      }}>
+        }}>
 
         <label htmlFor="search-bar" class="hidden"></label>
         <input onChange={(e)=>{
           this.onChange(e);
-        }} name="search-bar" type="text" id="search-bar" aria-label="search bar" />
-        <button type="submit" id="search-submit-button" />
+        }} name="search-bar" type="text" id="search-bar" aria-label="search bar" /><button  type="submit" id="search-submit-button" />
+        
 
       </form>
       

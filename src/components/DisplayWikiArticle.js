@@ -1,10 +1,10 @@
 import { Component } from 'react';
-import DefaultContext from './context/DefaultContext';
+
 
 
 
 class DisplayWikiArticle extends Component {
-    static contextType = DefaultContext;
+   
 
     state={
         open:false
@@ -25,7 +25,7 @@ class DisplayWikiArticle extends Component {
             return(
                 
                 <section className="wiki-article" id="wiki-article">
-                    <span title="Click to expand" aria-label="click to expand" ><h3 onClick={(e)=>this.togglePanel(e)} id="display-wiki-name">{name}</h3></span>
+                    <span  title="Click to expand" aria-label="click to expand" ><h3 tabindex="0"        onClick={(e)=>this.togglePanel(e)} id="display-wiki-name">{name}</h3></span>
                     {this.state.open ? ( 
                         <p id="content">{content}</p>) : null}
                     

@@ -64,7 +64,7 @@ class Main extends Component {
                 <HashRouter>
                
                     <header id="static-header">
-                        <h1 id="welcome">Welcome to (me)nses</h1>
+                        
                         <div id="flex">
                             <nav>
                                 <ul className="unordered-list">
@@ -72,7 +72,7 @@ class Main extends Component {
                                     <li><NavLink to="/topics">Topics</NavLink></li>
                                     <li><NavLink to="/contact">Contact </NavLink></li>
                                     <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
-                                    <span id="search-bar"><SearchBar setSearchTerm={this.setSearchTerm} /></span>
+                                    <SearchBar setSearchTerm={this.setSearchTerm} />
                                 
                                  </ul>
                                  <section>
@@ -90,10 +90,12 @@ class Main extends Component {
                             <Route path="/Contact" component={Contact}/>
 
                         </div>
+                        <WikiWindow store={this.state.store} searchTerm={this.state.searchTerm} />
                     </header>
                     <footer>
 
-                    <WikiWindow store={this.state.store} searchTerm={this.state.searchTerm} />
+                    
+                    <p><h6 id="footer-text">©(me)nses</h6></p>
                     </footer>
                    
                 </HashRouter>
