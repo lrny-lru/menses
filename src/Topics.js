@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import SearchBar from './components/SearchBar';
+
+
+
 
 import './index.css';
 
@@ -11,17 +13,34 @@ class Topics extends Component {
 
 
     render() {
+
+        
         return (
             <div>
                 <div id="Topics-Container">
                     <h2>Topics</h2>
                     <div className="topics">
                         <ul id="topics">
-                            <li title="Anatomy" id="anatomy"><a  aria-label="anatomy" href="/anatomy">Anatomy</a></li>
-                            <li title="Symptoms" id="Symptom"><a href="/Symptoms" Component={<SearchBar searchTerm="Symptoms" />}>Symptoms</a></li>
-                            <li title="Hormones" onClick={<SearchBar searchTerm="Hormones" />} id="hormone"><a href="/hormones">Hormones</a></li>
-                            <li title="Disorders" id="disorder"><a href="/disorders">Disorders</a></li>
-                            <li title="Menstrual Cycle" aria-label="Menstrual Cycle" id="cycle"><a href="/cycles">Menstrual Cycle</a></li>
+
+                            <li title="Anatomy" id="anatomy"><a  aria-label="anatomy" onClick={(e)=> {
+                                e.preventDefault();
+                                this.props.setSearchTerm("Anatomy")}} href="/anatomy"><b>Anatomy</b></a></li>
+
+                            <li title="Symptoms"  id="Symptom"><a href="/Symptoms" onClick={(e)=> {
+                                e.preventDefault();
+                                this.props.setSearchTerm("Symptoms")}}><b> Symptoms</b></a></li>
+
+                            <li title="Hormones"  id="hormone"><a onClick={(e)=> {
+                                e.preventDefault();
+                                this.props.setSearchTerm("Hormones")}} href="/hormones"><b>Hormones</b></a></li>
+
+                            <li title="Disorders" id="disorder"><a onClick={(e)=> {
+                                e.preventDefault();
+                                this.props.setSearchTerm("Disorders")}} href="/disorders"><b>Disorders</b></a></li>
+
+                            <li title="Menstrual Cycle" aria-label="Menstrual Cycle" id="cycle"><a onClick={(e)=> {
+                                e.preventDefault();
+                                this.props.setSearchTerm("Menstrual Cycle")}} href="/cycles"><b>Menstrual cycle</b></a></li>
                         </ul>
                     </div>
 

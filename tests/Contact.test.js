@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 
 
 
-import Main from './src/Main';
+import Contact from '../src/components/Contact';
 
 
 
-it(`should render the SPA without crashing`, ()=>{
+it(`should not crash`, ()=>{
     const div = document.createElement('div');
 
-    ReactDOM.render(<Main />, div);
+    ReactDOM.render(<Contact />, div);
     ReactDOM.unmountComponentAtNode(div);
 });
 

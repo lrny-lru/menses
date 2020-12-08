@@ -29,6 +29,7 @@ class Main extends Component {
    }
 
    setSearchTerm =(searchTerm) =>{
+       
        this.setState({searchTerm})
    }
 
@@ -64,19 +65,20 @@ class Main extends Component {
                 <HashRouter>
                
                     <header id="static-header">
-                        
+                    <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
+                        <SearchBar setSearchTerm={this.setSearchTerm} />
                         <div id="flex">
                             <nav>
                                 <ul className="unordered-list">
                                     <li><NavLink exact to="/">Home</NavLink></li>
                                     <li><NavLink to="/topics">Topics</NavLink></li>
                                     <li><NavLink to="/contact">Contact </NavLink></li>
-                                    <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
-                                    <SearchBar setSearchTerm={this.setSearchTerm} />
+                                    
+                                   
                                 
                                  </ul>
                                  <section>
-                                   
+                                 
                                 </section>
                                     
                             </nav>
@@ -86,7 +88,7 @@ class Main extends Component {
                         <div id="content">
                             <Route exact path="/" component={Home}/>
                             
-                            <Route path="/Topics" render={()=><Topics store={this.state.store} />} />
+                            <Route path="/Topics" render={()=><Topics setSearchTerm={this.setSearchTerm} store={this.state.store} />} />
                             <Route path="/Contact" component={Contact}/>
 
                         </div>

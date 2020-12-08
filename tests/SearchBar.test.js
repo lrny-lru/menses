@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 
 
 
-import Main from './src/Main';
+import SearchBar from '../src/SearchBar';
 
 
 
-it(`should render the SPA without crashing`, ()=>{
+it(`should not crash`, ()=>{
     const div = document.createElement('div');
 
-    ReactDOM.render(<Main />, div);
+    ReactDOM.render(<SearchBar />, div);
     ReactDOM.unmountComponentAtNode(div);
 });
 

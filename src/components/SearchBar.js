@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import DefaultContext from './context/DefaultContext';
 
 
 class SearchBar extends Component {

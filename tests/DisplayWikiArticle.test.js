@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom';
 
 
 
-import Main from './src/Main';
+import DisplayWikiArticle from '../src/components/DisplayWikiArticle';
 
 
 
-it(`should render the SPA without crashing`, ()=>{
+it(`should not crash`, ()=>{
     const div = document.createElement('div');
 
-    ReactDOM.render(<Main />, div);
+    ReactDOM.render(<DisplayWikiArticle />, div);
     ReactDOM.unmountComponentAtNode(div);
 });
 
