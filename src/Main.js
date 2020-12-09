@@ -94,7 +94,7 @@ class Main extends Component {
                         </div>
                         <WikiWindow store={this.state.store} searchTerm={this.state.searchTerm} />
                     </header>
-                    <footer>
+                    <footer id="main-footer">
 
                     
                     <p><h6 id="footer-text">©(me)nses</h6></p>

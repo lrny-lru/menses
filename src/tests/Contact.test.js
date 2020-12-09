@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 
 
-import Contact from '../src/components/Contact';
+import Contact from '../components/Contact';
 
 
 

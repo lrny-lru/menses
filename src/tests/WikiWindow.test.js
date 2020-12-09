@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 
 
-import WikiWindow from '../src/components/WikiWindow';
+import WikiWindow from '../components/WikiWindow';
 
 
 
