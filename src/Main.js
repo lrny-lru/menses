@@ -7,7 +7,7 @@ import {
     HashRouter
 } from 'react-router-dom';
 import Home from './components/Home';
-import Topics from './Topics';
+import Topics from './components/Topics';
 import Contact from './components/Contact';
 import WikiWindow from './components/WikiWindow';
 import SearchBar from './components/SearchBar';

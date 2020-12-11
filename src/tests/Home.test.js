@@ -2,7 +2,7 @@ import React from 'react';
 
 import ReactDOM from 'react-dom';
 
-import Home from './srcc/components/Home';
+import Home from '../src/components/Home.js';
 
 
 it('should render the landing sections without crashing', () =>{

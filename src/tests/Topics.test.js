@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 
 
-import Topics from '../src/Topics';
+import Topics from '../components/Topics';
 
 
 

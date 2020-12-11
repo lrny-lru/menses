@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 
 
-import DisplayWikiArticle from '../src/components/DisplayWikiArticle';
+import DisplayWikiArticle from '../components/DisplayWikiArticle';
 
 
 

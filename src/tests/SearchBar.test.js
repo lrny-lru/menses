@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 
 
-import SearchBar from '../src/SearchBar';
+import SearchBar from '../components/SearchBar';
 
 
 
