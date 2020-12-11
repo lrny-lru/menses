@@ -1,35 +1,202 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400&display=swap');
+
+
 html{
-  color:#fff;
-}
+ 
+  font-family:'Space Grotesk', sans-serif;
+} 
+
+
+ div, section, nav{
+  margin:auto;
+} 
+
+
+::-webkit-scrollbar {
+  width: 10px;
+} 
+
+ 
+ ::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+   
+} 
+ 
+
+ ::-webkit-scrollbar-thumb {
+  background: #888; 
+} 
+
+
+ ::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} 
+
 body {
+  display:flexbox;
+  background-image:url('https://i.imgur.com/950j5Gu.png');
+  background-attachment: fixed;
   background-color: #fff;
-  padding: 20px;
+  
   margin: 0;
+} 
+h1#menses-title{
+  padding-top:.3em;
+  padding-bottom:1em;
+  float:right;
+  padding-right:0.5em;
+  margin:0;
 }
-h1, h2, p, ul, li {
-  font-family:'Raleway', sans-serif;
-}
+
+h1#welcome{
+  
+  color:black;
+  text-align: center;
+} 
 
 ul.unordered-list li {
   display: inline;
   list-style-type: none;
   margin: 0;
-}
-ul.unordered-list {
-  background-color:#666699;
-  padding: 0;
-}
+} 
+
+ 
 
 ul.unordered-list li a {
+  color: #fff;
   
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
   display: inline-block;
 }
+ul.unordered-list {
+  background-color:#666699;
+  padding: 0;
+  margin-top:-0;
+ 
+}
 
 
+.active  {
+  background-color: #00ff99;
+  color:#000;
+  
+  
+}
+
+
+
+ div.welcome-container{
+  background-color: #fff;
+  
+ }
+ div.welcome-container{
+  border: solid rgb(165, 164, 164) 0.1em;
+  color:#000;
+  padding:1.0em;
+  margin-top:1em;
+  margin-bottom:1em;
+  width:fit-content;
+  max-width: 50%;
+  order:1;
+  
+}
+ 
+header#static-header{
+  background-color:#666699;
+
+}
+form#search-bar{
+  display:inline-flex;
+  margin-left: 0.7em;
+  float: right;
+  margin-top:1.3em;
+  margin-right:1em;
+  
+}
+input#search-bar{
+  display: inline-block;
+  border: solid rgb(127, 113, 133) 0.2em;
+  border-top-left-radius:0.2em;
+  border-bottom-left-radius:0.2em;
+  
+  
+
+}
+button#search-submit-button{
+  height:20.00px;
+  width:20.31px;
+  background-image:url('https://i.imgur.com/C6S01i4.png');
+  background-position: center;
+  background-size: contain;
+  border: #333333 0.2em solid;
+  border-radius: 0.2em;
+
+
+  
+}
+div#Topics-Container{
+  background-color:#fff;
+  padding-right: 2em;
+  border: solid rgb(219, 218, 218) 0.1em;
+  
+}
+h2#Topics-Container{
+  color:black;
+  margin-left:0.5em;
+} 
+
+
+div#content{
+  width:fit-content;
+}
+section#wiki-article{
+  padding: 0.3em 0.3em 0.3em 0.3em;
+  
+}
+
+#wiki-article{
+  margin-top: 0.3em;
+  margin-left:1.0em;
+  margin-right:1.0em;
+  color: #000;
+  border: #ece6e8 solid 0.1em;
+  
+}
+
+footer{
+  margin-top: 3.0em;
+  
+}
+
+#wikis{
+  margin-top:3.0em;
+  margin-left:3.0em;
+  background-color:#fff;
+}
+
+section#container4container{
+ 
+  background-color:#fff;
+  border: solid rgb(219, 218, 218) 0.1em;
+  margin-bottom:1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
+  padding:1em;
+  
+  
+}
+h3#display-wiki-name:hover{
+  color:#000;
+  background-color: #00ff99;
+  
+}
+section#wikis{
+  color:#000;
+}
 
 #menses-title{
  display:inline;
@@ -37,8 +204,14 @@ ul.unordered-list li a {
 
 }
 
+section.contacts{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+ 
+}
 .content {
-  background-color: #666666;
+  background-color: #e5e5e7;
   padding: 20px;
 }
 .content h2 {
@@ -49,16 +222,171 @@ ul.unordered-list li a {
   margin-bottom: 10px;
 }
 
-.active {
-  background-color: #00ff99;
-  
-  
-}
-ul.active li a {
-  color:#000;
+div#Topics-Container h2{
+  margin-left:0.4em;
+  padding:1em;
 }
 
 ul#topics li a{
+  text-decoration:none;
+  color:#000;
+}
+
+ul#topics li {
   text-decoration:  none;
   list-style:none ;
+}
+ul#topics{
+  display:inline-flex;
+  justify-content: space-between;
+}
+
+#topics li{
+  
+  justify-content: space-around;
+  border: #000 solid 0.1em;
+  border-radius:0.3em;
+  height: 10.0em;
+  width: 10.0em;
+  
+
+}
+
+#anatomy{
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Gray1167.svg/553px-Gray1167.svg.png");
+  background-position: center;
+}
+
+#hormone{
+  background-image:url("https://openstax.org/resources/0dbf6852b50fac8780909f0855e32e87bdc761af");
+}
+#cycle{
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Lining_of_Uterine_Wall.jpg");
+  background-position: center;
+}
+#symptom{
+  background-image:url("https://openstax.org/resources/cdcdf2286ebcf71c2c109cbb44f5965ff258bf5a");
+  background-position: center;
+}
+#disorder{
+  background-image:url("https://images.squarespace-cdn.com/content/v1/5b1d432255b02ca400b7d550/1528660829342-04BVWZ1HDC80IO9A4Q1Y/ke17ZwdGBToddI8pDm48kPnsf5mMwK3KDy1tisBlUmRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpz-e-UqgkMEfcidCGc60YhJxyx2DguYXodNYGkBnakWNjMf4spqvx95de_vD8JxcLk/Ovary.jpg?format=750w");
+  background-position: center;
+}
+
+div.Contacts-container{
+  border: solid 0.1em rgb(219, 218, 218) ;
+  color:#000;
+  background-color: #fff;
+  padding:0.3em;
+  margin-top:0.5em;
+  margin-bottom:0.5em;
+}
+footer#main-footer{
+   
+  background-color: rgb(51, 51, 51);
+  margin:auto;
+  
+ 
+  left:4em;
+  right:4em;
+  height: 5em;
+
+}
+#main-footer h6{
+  
+    background-color: rgb(44, 44, 44);
+    
+  
+}
+h6#footer-text{
+  text-align:center;
+  padding:0.5em;
+}
+
+h6#footer-text {
+    margin: 0;
+}
+
+
+#main-footer p{
+    margin: 0;
+    color:#fff;
+    font-weight: 100;
+}
+#main-footer h3{
+ text-align: center;
+ color:#00ff99;
+ padding-top:1em;
+}
+
+footer#main-footer {
+  background-color: #333;
+  margin: auto;
+  
+  display: flex;
+  flex-flow: column-reverse;
+}
+
+
+
+/*@media all and (min-width:320px ),(max-width:900px){ */
+@media all and (max-width:980px) {
+
+  ul#topics {
+    display: flex;
+    flex-flow: column;
+  }
+
+  form#search-bar{
+  display:flex;
+  justify-content: center;
+  
+  width: fit-content;
+  margin:auto;
+  
+  }
+  div#flex{
+    
+    
+
+  }
+  input#search-bar{
+    border-radius: 0.4em;
+    border: #535554 solid 0.2em;
+    display:flex;
+    justify-content: center;
+    
+  }
+  
+  ul.unordered-list{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width:fit-content;
+  }
+  #topics li{
+    height:2em;
+    justify-content: space-around;
+  }
+  #topics li a{
+
+    color:#000;
+  }
+
+  section#container4container{
+    display:flex;
+    max-width: 100%;
+    padding:0;
+    margin-right:-0;
+    
+  }
+
+  h1#menses-title{
+    margin-left:0.7em
+  }
+
+  footer#main-foot{
+    width:20%;
+  }
+  
 }
