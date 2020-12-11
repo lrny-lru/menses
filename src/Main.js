@@ -65,7 +65,7 @@ class Main extends Component {
                 <HashRouter>
                
                     <header id="static-header">
-                    <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
+                        <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
                         <SearchBar setSearchTerm={this.setSearchTerm} />
                         <div id="flex">
                             <nav>
@@ -77,12 +77,12 @@ class Main extends Component {
                                    
                                 
                                  </ul>
-                                 <section>
-                                 
-                                </section>
+                              
                                     
                             </nav>
+                 
                         </div>
+                        </header>
                   
                        
                         <div id="content">
@@ -93,11 +93,12 @@ class Main extends Component {
 
                         </div>
                         <WikiWindow store={this.state.store} searchTerm={this.state.searchTerm} />
-                    </header>
+                   
                     <footer id="main-footer">
-
+                        
                     
-                    <p><h6 id="footer-text">©(me)nses</h6></p>
+                    <p><h6 id="footer-text">Copyright © 2020 (me)nses All rights reserved</h6></p>
+                    <p aria-label="menses"><h3>(me)nses</h3></p>
                     </footer>
                    
                 </HashRouter>

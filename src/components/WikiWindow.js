@@ -36,7 +36,7 @@ class WikiWindow extends Component {
 
         return( 
             <section id="container4container">
-                <section id="container-for-wikis">
+                <section id="wikis">
                     <h2> {this.props.searchTerm.length==0 ? "Recently added articles" : `Showing results for: ${this.props.searchTerm}`}</h2>
                     {this.populateItems(<DisplayWikiArticle />)}
                

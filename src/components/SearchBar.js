@@ -35,10 +35,10 @@ class SearchBar extends Component {
         this.props.setSearchTerm(this.state.searchInput)
         }}>
 
-        <label htmlFor="search-bar" class="hidden"></label>
+        <label htmlFor="search-bar" ></label>
         <input onChange={(e)=>{
           this.onChange(e);
-        }} name="search-bar" type="text" id="search-bar" aria-label="search bar" /><button  type="submit" id="search-submit-button" />
+        }} type="text" id="search-bar" aria-label="search bar" /><button  type="submit" id="search-submit-button" />
         
 
       </form>

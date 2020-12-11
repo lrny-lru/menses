@@ -19,7 +19,7 @@ class Topics extends Component {
             <div>
                 <div id="Topics-Container">
                     <h2>Topics</h2>
-                    <div className="topics">
+                    <div >
                         <ul id="topics">
 
                             <li title="Anatomy" id="anatomy"><a  aria-label="anatomy" onClick={(e)=> {

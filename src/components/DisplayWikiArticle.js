@@ -24,7 +24,7 @@ class DisplayWikiArticle extends Component {
         const { name, content, tags } = this.props;
             return(
                 
-                <section className="wiki-article" id="wiki-article">
+                <section className="w-a" id="wiki-article">
                     <span  title="Click to expand" aria-label="click to expand" ><h3 tabindex="0"        onClick={(e)=>this.togglePanel(e)} id="display-wiki-name">{name}</h3></span>
                     {this.state.open ? ( 
                         <p id="content">{content}</p>) : null}
