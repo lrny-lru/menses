@@ -128,9 +128,10 @@ input#search-bar{
 button#search-submit-button{
   height:20.00px;
   width:20.31px;
-  background-image:url('https://i.imgur.com/C6S01i4.png');
+  background-image:url('https://i.imgur.com/YW8fFiK.png');
+  background-color: rgb(51, 51, 51);
   background-position: center;
-  background-size: contain;
+  background-size:100%;
   border: #333333 0.2em solid;
   border-radius: 0.2em;
 
