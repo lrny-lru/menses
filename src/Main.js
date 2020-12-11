@@ -85,13 +85,13 @@ class Main extends Component {
                         </header>
                   
                        
-                        <div id="content">
+                        <section id="content">
                             <Route exact path="/" component={Home}/>
                             
                             <Route path="/Topics" render={()=><Topics setSearchTerm={this.setSearchTerm} store={this.state.store} />} />
                             <Route path="/Contact" component={Contact}/>
 
-                        </div>
+                        </section>
                         <WikiWindow store={this.state.store} searchTerm={this.state.searchTerm} />
                    
                     <footer id="main-footer">
