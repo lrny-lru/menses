@@ -32,7 +32,9 @@ html{
  ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 } 
-
+body > #root > div {
+  height: 100vh;
+}
 body {
   display:flexbox;
   background-image:url('https://i.imgur.com/950j5Gu.png');
