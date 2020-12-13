@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import './Notepad.css';
-import DefaultContext from './components/context/DefaultContext';
+import DefaultContext from './context/DefaultContext';
 
 class Notepad extends Component {
     static contextType = DefaultContext;
@@ -75,7 +75,7 @@ class Notepad extends Component {
 
     updateNoteContent = (noteContent) => {
         this.setState({
-            content noteContent,
+            content:noteContent,
 
         });
     };
@@ -99,9 +99,41 @@ class Notepad extends Component {
                     <p>
                         This resource isn't anywhere near complete yet but you can help!
                     </p>
-                    <form id="note-form">
-                        <textarea />
-                    </form>
+                    <section className="notes-section">
+					<form
+						className="note-form"
+						aria-label="note-form"
+						onSubmit={(e) => this.handleSubmit(e)}
+					>
+						<section className="form-section">
+							<label htmlFor=""></label>
+							<fieldset className="subject-line" aria-label="subject-line">
+								<label htmlFor="subject">Subject</label>
+								<input
+									type="text"
+									placeholder="Ex: More info on Polycystic Ovarian Syndrome"
+									value={this.state.subject}
+									className="subject"
+									id="subject"
+									onChange={(e) => this.updateNoteSubject(e.target.value)}
+									required
+								/>
+							</fieldset>
+							<textarea
+								className="gentle-reminder"
+								id="gentle-reminder"
+								placeholder="Remember to..."
+								value={this.state.content}
+								rows="15"
+								required
+								onChange={(e) => this.updateNoteContent(e.target.value)}
+							></textarea>
+						</section>
+						<button className="save-note" type="submit" aria-label="save-note">
+							Save
+						</button>
+					</form>
+                </section>
                 </td>
             </article>
 

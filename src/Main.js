@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
 import React, { Component } from 'react';
 import DefaultContext from './components/context/DefaultContext';
@@ -12,6 +13,7 @@ import Contact from './components/Contact';
 import WikiWindow from './components/WikiWindow';
 import SearchBar from './components/SearchBar';
 import Notepad from '../src/components/Notepad';
+import './Main.css'
 
 class Main extends Component {
     static contextType = DefaultContext;
@@ -55,12 +57,21 @@ class Main extends Component {
        this.updateStore();
    } 
 
+   mobileMenu = () => {
+    const x = document.getElementById("navcontainer");
+    if (x.className === "divnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "divnav";
+    }
+  }
+
     render(){ 
         const contextValue = {
             updateStore: this.updateStore,
             url:this.state.url
         }
-
+         
         return(
             <DefaultContext.Provider value={contextValue}>
                 <HashRouter>
@@ -68,20 +79,16 @@ class Main extends Component {
                     <header id="static-header">
                         <label htmlFor="page title" aria-label="menses" class="screen-reader-text"><h1 id="menses-title">(me)nses</h1></label>
                         <SearchBar setSearchTerm={this.setSearchTerm} />
-                        <div id="flex">
-                            <nav>
-                                <ul className="unordered-list">
-                                    <li><NavLink exact to="/">Home</NavLink></li>
-                                    <li><NavLink to="/topics">Topics</NavLink></li>
-                                    <li><NavLink to="/contact">Contact </NavLink></li>
-                                    
-                                   
-                                
-                                 </ul>
-                              
-                                    
-                            </nav>
-                 
+                        <div className="divnav" id="navcontainer">
+                            
+                               
+                                    <a  className="active"><NavLink exact to="/">Home</NavLink></a>
+                                    <a ><NavLink to="/topics">Topics</NavLink></a>
+                                    <a ><NavLink to="/contact">Contact </NavLink></a>
+
+                                    <a  className="icon" onclick={this.mobileMenu()}>
+                                            <i class="fa fa-bars"></i>
+                                    </a>
                         </div>
                         </header>
                   
