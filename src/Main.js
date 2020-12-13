@@ -11,6 +11,7 @@ import Topics from './components/Topics';
 import Contact from './components/Contact';
 import WikiWindow from './components/WikiWindow';
 import SearchBar from './components/SearchBar';
+import Notepad from '../src/components/Notepad';
 
 class Main extends Component {
     static contextType = DefaultContext;
@@ -92,6 +93,7 @@ class Main extends Component {
                             <Route path="/Contact" component={Contact}/>
 
                         </section>
+                        <Notepad />
                         <WikiWindow store={this.state.store} searchTerm={this.state.searchTerm} />
                    
                     <footer id="main-footer">

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 
+
 class Home extends Component{
     render(){
         return(
@@ -13,6 +14,7 @@ class Home extends Component{
                         Menses is a wiki dedicated to cultivating up-to-date knowledge on: the menstrual cycle, sex hormones, anatomy and disorders/diseases related to menses without using gendered language. 
                     </p>
                 </section>
+               
             
             </div>
             
