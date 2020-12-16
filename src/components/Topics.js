@@ -19,6 +19,7 @@ class Topics extends Component {
             <div>
                 <div id="Topics-Container">
                     <h2>Topics</h2>
+                    <p>When you click, results related to the topic will appear in the recently added articles box below</p>
                     <div >
                         <ul id="topics">
 

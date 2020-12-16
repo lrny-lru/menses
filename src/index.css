@@ -8,7 +8,7 @@ html{
 } 
 
 
- div, section, nav{
+ div, section, nav, td{
   margin:auto;
 } 
 
@@ -57,7 +57,7 @@ h1#welcome{
   text-align: center;
 } 
 
-ul.unordered-list li {
+ul#unordered-list li {
   display: inline;
   list-style-type: none;
   margin: 0;
@@ -65,7 +65,7 @@ ul.unordered-list li {
 
  
 
-ul.unordered-list li a {
+ul#unordered-list li a {
   color: #fff;
   
   font-weight: bold;
@@ -73,7 +73,7 @@ ul.unordered-list li a {
   padding: 20px;
   display: inline-block;
 }
-ul.unordered-list {
+ul#unordered-list {
   background-color:#666699;
   padding: 0;
   margin-top:-0;
@@ -141,18 +141,34 @@ button#search-submit-button{
   
 }
 div#Topics-Container{
+  margin-top:1em;
   background-color:#fff;
   padding-right: 2em;
-  border: solid rgb(219, 218, 218) 0.1em;
+  padding-bottom:2em;
+  
+
+  border:solid rgb(165, 164, 164) 0.1em;
+
+
+  padding:1.0em;
+  margin-top:1em;
+  margin-bottom:1em;
+  width:fit-content;
+ 
   
 }
 h2#Topics-Container{
   color:black;
   margin-left:0.5em;
 } 
+div#Topics-Container p{
+  margin-left:1em;
+ 
+}
+
 section#content{
-  padding-bottom:7em;
-  height:10em;
+ 
+  
 }
 section#wiki-article{
   padding: 0.3em 0.3em 0.3em 0.3em;
@@ -182,9 +198,10 @@ footer{
 section#container4container{
  
   background-color:#fff;
-  border: solid rgb(219, 218, 218) 0.1em;
-  margin-left:20%;
-  margin-right:50%;
+  border:solid rgb(165, 164, 164) 0.1em;
+  width: fit-content;
+  padding-bottom:2em;
+  margin-bottom:2em;
  
   
 }
@@ -195,6 +212,7 @@ h3#display-wiki-name:hover{
 }
 section#wikis{
   color:#000;
+  margin-right:2em;
 }
 
 #menses-title{
@@ -234,14 +252,16 @@ ul#topics li a{
 ul#topics li {
   text-decoration:  none;
   list-style:none ;
+ 
 }
 ul#topics{
   display:inline-flex;
   justify-content: space-between;
+  padding:0;
 }
 
 #topics li{
-  
+  margin:auto;
   justify-content: space-around;
   border: #000 solid 0.1em;
   border-radius:0.3em;
@@ -329,25 +349,47 @@ footer#main-footer {
 
 
 /*@media all and (min-width:320px ),(max-width:900px){ */
-@media all and (max-width:980px) {
+@media all and (max-width:980px), ( max-width:600px), (max-width:400px) {
 
+  header#static-header{
+    display:flexbox;
+    flex-direction:column;
+  }
+  h1#menses-title{
+    float:none;
+    order:1;
+  }
   ul#topics {
     display: flex;
     flex-flow: column;
+    padding-left:0;
+  }
+ 
+ 
+  #unordered-list #search-bar {
+    float: none;
   }
 
-  form#search-bar{
-  display:flex;
-  justify-content: center;
-  
-  width: fit-content;
-  margin:auto;
-  
+  #unordered-list  li a, #unordered-list input[type=text], #unordered-list #search-bar button  {
+    float: none;
+    margin: 0;
+    padding: 14px;
   }
-  div#flex{
-    
-    
 
+  #unordered-list input[type=text] {
+    border: 1px solid #ccc;  
+  }
+  ul#unordered-list{
+    order:2;
+    height:12em;
+    margin:auto;
+    justify-content: space-around;
+    flex-direction: row;
+    width:20em ;
+    
+  }
+  ul#unordered-list li{
+    height:30%;
   }
   input#search-bar{
     border-radius: 0.4em;
@@ -356,13 +398,12 @@ footer#main-footer {
     justify-content: center;
     
   }
-  
-  ul.unordered-list{
-    display:flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width:fit-content;
+  #search-bar button{
+    height:46px;
+    background-repeat: no-repeat;
   }
+  
+  
   #topics li{
     height:2em;
     justify-content: space-around;
@@ -376,12 +417,19 @@ footer#main-footer {
     display:flex;
     max-width: 100%;
     padding:0;
-    margin-left:
+    
     
   }
 
   h1#menses-title{
-    margin-left:0.7em
+    margin-left:3.5em;
+    
+  }
+  div#contain-ul{
+    margin-top:1em;
+  }
+  div#Topics-Container{
+    width:50%;
   }
 
   footer#main-foot{

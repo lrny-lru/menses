@@ -7,11 +7,11 @@ class Notepad extends Component {
     state =
         {
             store:{ 
-             subject: "",
-             content: "",
+             subject:"",
+             content:"",
              error: null,
             },
-            url:'https://hidden-escarpment-33113.herokuapp.com',
+            url:'http://localhost:8000',
         };
 
     clearValues = () => {
@@ -24,7 +24,7 @@ class Notepad extends Component {
 
     handleSubmit = (e) => {
 
-        e.preventDefaualt();
+        e.preventDefault();
         const { subject, content } = this.state;
         this.setState({ error: null });
         const newNote = {
@@ -46,7 +46,7 @@ class Notepad extends Component {
 
             };
             
-            fetch( `${this.context.url}//TODO `  ,postOptions)
+            fetch( `${this.state.url}/notes`, postOptions )
 
              .then( r =>{
                  if ( !r.ok ){
@@ -57,7 +57,7 @@ class Notepad extends Component {
              .then( newNote =>{ 
                     this.context.addNote( newNote );
                     this.clearValues();
-                    this.props.history.push(` /notes `);
+                    this.props.history.push( `/notes` );
 
              })
              .catch( err =>{
@@ -96,8 +96,8 @@ class Notepad extends Component {
 
             <article>
                 <td id="note-box">
-                    <p>
-                        This resource isn't anywhere near complete yet but you can help!
+                    <p id="please-help">
+                        This resource isn't anywhere near complete yet but you can help! 
                     </p>
                     <section className="notes-section">
 					<form
@@ -111,27 +111,31 @@ class Notepad extends Component {
 								<label htmlFor="subject">Subject</label>
 								<input
 									type="text"
-									placeholder="Ex: More info on Polycystic Ovarian Syndrome"
+									placeholder="..."
 									value={this.state.subject}
 									className="subject"
 									id="subject"
 									onChange={(e) => this.updateNoteSubject(e.target.value)}
 									required
 								/>
+                                <textarea
+								
+								    id="notebox"
+								    placeholder="Ex: Add more info on Polycystic Ovarian Syndrome"
+								    value={this.state.content}
+								    rows="15"
+								    required
+								    onChange={(e) => this.updateNoteContent(e.target.value)}
+							        >
+
+                                </textarea>
+                                <button className="save-note" type="submit" aria-label="save-note">
+							        Submit
+						        </button>
 							</fieldset>
-							<textarea
-								className="gentle-reminder"
-								id="gentle-reminder"
-								placeholder="Remember to..."
-								value={this.state.content}
-								rows="15"
-								required
-								onChange={(e) => this.updateNoteContent(e.target.value)}
-							></textarea>
+							
 						</section>
-						<button className="save-note" type="submit" aria-label="save-note">
-							Save
-						</button>
+						
 					</form>
                 </section>
                 </td>

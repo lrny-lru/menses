@@ -3,8 +3,96 @@ form#note-form{
     margin: 0.5em;
     padding:1em;
 }
-
-td#note-box{
-    border: solid rgb(187, 186, 186) 0.2em;
+article{
+   
+}
+p#please-help{
+    height:1em;
+}
+section.notes-section{
+    display:flex;
+    margin:0;
+    height:100px;
+    position: absolute;
+    left:0;
 
 }
+td#note-box{
+    display:flex;
+    border: solid rgb(165, 164, 164) 0.1em;
+    position: relative;
+    color:#000;
+    padding:1.0em;
+    margin-top:1em;
+    margin-bottom:2em;
+    height:300px;
+    width:fit-content;
+    max-width: 50%;
+    background-color: white;
+    
+}
+fieldset.subject-line{
+    margin-top:5em;
+    margin-left:1.7em;
+    margin-right:1.7em;
+    padding:1em;
+}
+textarea#notebox{
+    height:100px;
+    width:300px;
+    
+}
+
+@media all and (max-width:980px){
+
+    section.notes-section{
+        display:flex;
+        margin:0;
+        height:100px;
+        position: absolute;
+        left:0;
+
+    }
+    form.note-form {
+        display:flex;
+        
+       
+        height:100px;
+    }
+    p#please-help{
+        
+        display:inline-flex;
+        flex-direction: row;
+    }
+    article{
+        
+    }
+    td#note-box{
+        position:relative;
+        height:500px;
+        border: solid rgb(165, 164, 164) 0.1em;
+        color:#000;
+        padding:1.0em;
+        margin-top:1em;
+        width:fit-content;
+        background-color: white;
+        margin-left:20%;
+        
+    }
+    fieldset.subject-line{
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        margin-left:.6em;
+        margin-top:7em;
+        
+    }
+    textarea#notebox{
+        display:flex;
+        width: 10em;
+        
+        
+    }
+
+}
+
