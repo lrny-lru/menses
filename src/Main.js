@@ -39,7 +39,7 @@ class Main extends Component {
    getTopics = () =>{
        
     
-        fetch(`${this.context.url}/topics`)
+        fetch(`${this.state.url}/topics`)
             .then( r => r.json( ))
             .then(r => {this.setState({
                 store:{
