@@ -22,7 +22,7 @@ class Main extends Component {
        store:{
            topics:[]
        }, 
-       url:'https://oopsiedaisies.herokuapp.com ',
+       url:'https://oopsiedaisies.herokuapp.com',
 
        searchTerm:'' 
    };
@@ -38,7 +38,7 @@ class Main extends Component {
 
    getTopics = () =>{
        
-    
+        
         fetch(`${this.state.url}/topics`)
             .then( r => r.json( ))
             .then(r => {this.setState({
