@@ -22,7 +22,7 @@ class Main extends Component {
        store:{
            topics:[]
        }, 
-       url:'https://oopsiedaisies.herokuapp.com/ ',
+       url:'https://oopsiedaisies.herokuapp.com ',
 
        searchTerm:'' 
    };

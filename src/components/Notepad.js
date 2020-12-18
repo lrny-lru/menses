@@ -11,7 +11,7 @@ class Notepad extends Component {
              content:"",
              error: null,
             },
-            url:'https://oopsiedaisies.herokuapp.com/',
+            url:'https://oopsiedaisies.herokuapp.com',
         };
 
     clearValues = () => {
