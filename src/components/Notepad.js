@@ -97,7 +97,7 @@ class Notepad extends Component {
             <article>
                 <td id="note-box">
                     <p id="please-help">
-                        This resource isn't anywhere near complete yet but you can help! 
+                        This resource isn't anywhere near complete but you can help! 
                     </p>
                     <section className="notes-section">
 					<form
@@ -111,7 +111,7 @@ class Notepad extends Component {
 								<label htmlFor="subject">Subject</label>
 								<input
 									type="text"
-									placeholder="..."
+									placeholder="Name of suggestion"
 									value={this.state.subject}
 									className="subject"
 									id="subject"
@@ -121,7 +121,7 @@ class Notepad extends Component {
                                 <textarea
 								
 								    id="notebox"
-								    placeholder="Ex: Add more info on Polycystic Ovarian Syndrome"
+								    placeholder="Ex: Add more info on PCOS or Polycystic Ovary Syndrome"
 								    value={this.state.content}
 								    rows="15"
 								    required
