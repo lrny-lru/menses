@@ -97,7 +97,7 @@ class Notepad extends Component {
             <article>
                 <td id="note-box">
                     <p id="please-help">
-                        This resource isn't anywhere near complete but you can help! 
+                        This resource is for y'all so feel free to help me complete it! 
                     </p>
                     <section className="notes-section">
 					<form
