@@ -246,7 +246,12 @@ div#Topics-Container h2{
 
 ul#topics li a{
   text-decoration:none;
-  color:#000;
+  
+  color: white; 
+  padding:.5em;
+  letter-spacing: -1px;  
+  background: rgb(0, 0, 0); /* fallback color */
+  background: rgba(0, 0, 0, 0.7);
 }
 
 ul#topics li {
@@ -272,22 +277,32 @@ ul#topics{
 }
 
 #anatomy{
+  
+  
   background-image:url("https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Gray1167.svg/553px-Gray1167.svg.png");
   background-position: center;
 }
 
 #hormone{
+  
+  
   background-image:url("https://openstax.org/resources/0dbf6852b50fac8780909f0855e32e87bdc761af");
 }
 #cycle{
+  
+  
   background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/9f/Lining_of_Uterine_Wall.jpg");
   background-position: center;
 }
 #symptom{
+ 
+  
   background-image:url("https://openstax.org/resources/cdcdf2286ebcf71c2c109cbb44f5965ff258bf5a");
   background-position: center;
 }
 #disorder{
+  
+  
   background-image:url("https://images.squarespace-cdn.com/content/v1/5b1d432255b02ca400b7d550/1528660829342-04BVWZ1HDC80IO9A4Q1Y/ke17ZwdGBToddI8pDm48kPnsf5mMwK3KDy1tisBlUmRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpz-e-UqgkMEfcidCGc60YhJxyx2DguYXodNYGkBnakWNjMf4spqvx95de_vD8JxcLk/Ovary.jpg?format=750w");
   background-position: center;
 }
@@ -410,9 +425,17 @@ footer#main-footer {
     height:2em;
     justify-content: space-around;
   }
-  #topics li a{
+  ul#topics li a{
 
-    color:#000;
+    
+    text-decoration:none;
+      
+    color: white; 
+    padding:.2em;
+    letter-spacing: -1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.7);
+    
   }
 
   section#container4container{

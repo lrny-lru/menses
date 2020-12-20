@@ -27,7 +27,7 @@ class Topics extends Component {
                                 e.preventDefault();
                                 this.props.setSearchTerm("Anatomy")}} href="/anatomy"><b>Anatomy</b></a></li>
 
-                            <li title="Symptoms"  id="Symptom"><a href="/Symptoms" onClick={(e)=> {
+                            <li title="Symptoms"  id="symptom"><a href="/Symptoms" onClick={(e)=> {
                                 e.preventDefault();
                                 this.props.setSearchTerm("Symptoms")}}><b> Symptoms</b></a></li>
 

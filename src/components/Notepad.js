@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import './Notepad.css';
 import DefaultContext from './context/DefaultContext';
+import $ from 'jquery';
 
 class Notepad extends Component {
     static contextType = DefaultContext;
@@ -27,10 +28,12 @@ class Notepad extends Component {
         e.preventDefault();
         const { subject, content } = this.state;
         this.setState({ error: null });
+        const result = window.alert('Thanks for the feedback!');
         const newNote = {
             subject,
             content,
         };
+
     
 
         const postOptions = {
@@ -63,9 +66,15 @@ class Notepad extends Component {
              .catch( err =>{
                  this.setState({
                      error: err.message,
-                 });
-             });
-    };
+                    });
+                });
+
+            return result;
+            
+        };
+    
+
+    
 
     updateNoteSubject = (noteSubject) => {
         this.setState({
@@ -89,7 +98,7 @@ class Notepad extends Component {
             return "Subject input must be less than 50 characters long."
         }
 
-    }
+    };
 
     render() {
         return (
