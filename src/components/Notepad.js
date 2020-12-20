@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import './Notepad.css';
 import DefaultContext from './context/DefaultContext';
-import $ from 'jquery';
+
 
 class Notepad extends Component {
     static contextType = DefaultContext;
