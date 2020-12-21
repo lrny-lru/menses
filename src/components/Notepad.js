@@ -1,10 +1,10 @@
 import { Component } from 'react';
 import './Notepad.css';
-import DefaultContext from './context/DefaultContext';
+
 
 
 class Notepad extends Component {
-    static contextType = DefaultContext;
+    
     state =
         {
             store:{ 
@@ -58,20 +58,25 @@ class Notepad extends Component {
                  return r.json();
              })
              .then( newNote =>{ 
-                    this.context.addNote( newNote );
+                    console.log(newNote);
                     this.clearValues();
-                    this.props.history.push( `/notes` );
+                    
 
              })
              .catch( err =>{
-                 this.setState({
-                     error: err.message,
-                    });
+                console.error(err);
+                window.alert('Something went wrong submitting feedback');
+                this.setState({
+               
+                    error: this.state.error,
+
                 });
 
-            return result;
+                return result;
+             });
+            }
             
-        };
+            
     
 
     
@@ -116,7 +121,7 @@ class Notepad extends Component {
 					>
 						<section className="form-section">
 							<label htmlFor=""></label>
-							<fieldset className="subject-line" aria-label="subject-line">
+							<fieldset className="subject-line" id="field" aria-label="subject-line">
 								<label htmlFor="subject">Subject</label>
 								<input
 									type="text"
@@ -138,7 +143,7 @@ class Notepad extends Component {
 							        >
 
                                 </textarea>
-                                <button className="save-note" type="submit" aria-label="save-note">
+                                <button onClick="document.getElementById('field').value = ''" className="save-note" type="submit" aria-label="save-note">
 							        Submit
 						        </button>
 							</fieldset>
